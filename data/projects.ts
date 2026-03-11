@@ -17,7 +17,7 @@ export const projects: Project[] = [
     title: "Cinematic Short Video",
     category: "Videography",
     description: "A narrative-driven short film exploring urban landscapes",
-    videoUrl: "/videos/Cinematic_video.MOV",
+    videoUrl: "/videos/Cinematic_video.mp4",
     isLocal: true,
     details: "This project showcases advanced cinematography techniques including drone footage, gimbal work, and color grading.",
     tools: ["Sony A7S III", "DJI Ronin", "DaVinci Resolve"],
