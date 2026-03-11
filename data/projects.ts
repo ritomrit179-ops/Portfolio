@@ -15,7 +15,7 @@ export const projects: Project[] = [
   {
     id: "project-1",
     title: "Cinematic Short Video",
-    category: "Videography",
+    category: "Unreal Rendering",
     description: "A narrative-driven short film exploring urban landscapes",
     videoUrl: "/videos/Cinematic_video.mp4",
     isLocal: true,
@@ -37,7 +37,7 @@ export const projects: Project[] = [
   {
     id: "project-3",
     title: "Product Showcase",
-    category: "Videography",
+    category: "Unreal Rendering",
     description: "High-end product showcase with dynamic camera movements",
     videoUrl: "/videos/Product_visualisation.MP4",
     isLocal: true,
