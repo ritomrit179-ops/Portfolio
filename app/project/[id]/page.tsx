@@ -35,22 +35,22 @@ export default async function ProjectPage({
   if (!project) notFound();
 
   const accentColor =
-    project.category === "Unreal Rendering"
+    project.category === "Unreal Engine Filmmaking"
       ? "from-orange-500 to-red-500"
       : "from-purple-500 to-blue-500";
 
   const accentBg =
-    project.category === "Unreal Rendering"
+    project.category === "Unreal Engine Filmmaking"
       ? "from-orange-500/20 to-red-500/20"
       : "from-purple-500/20 to-blue-500/20";
 
   const accentBorder =
-    project.category === "Unreal Rendering"
+    project.category === "Unreal Engine Filmmaking"
       ? "border-orange-500/30"
       : "border-purple-500/30";
 
   const accentDot =
-    project.category === "Unreal Rendering"
+    project.category === "Unreal Engine Filmmaking"
       ? "bg-orange-500"
       : "bg-purple-500";
 
