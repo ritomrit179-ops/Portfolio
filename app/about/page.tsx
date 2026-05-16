@@ -16,15 +16,15 @@ export default function AboutPage() {
         
         <div className="space-y-8 text-gray-400 text-lg leading-relaxed">
           <p className="text-xl text-gray-300">
-            I'm a videographer and Unreal Engine artist specializing in creating 
-            cinematic experiences that blend real-world footage with cutting-edge 
-            real-time rendering technology.
+            I'm a filmmaker working across two disciplines — Unreal Engine 5 filmmaking
+            and traditional videography.
           </p>
-          
+
           <p>
-            With expertise in both traditional cinematography and modern game engine 
-            workflows, I bring stories to life through compelling visuals and 
-            immersive environments.
+            On the UE5 side, I build fully CG cinematic productions inside Unreal Engine —
+            designing environments, rigging characters, blocking shots, and rendering the
+            final film through Movie Render Queue. On the videography side, I shoot and
+            edit real-world footage, handling everything from camera work to color grading.
           </p>
 
           <div className="pt-12">
@@ -62,7 +62,7 @@ export default function AboutPage() {
                   </h3>
                   <ul className="space-y-3 text-gray-400">
                     <li className="flex items-center gap-2">
-                      <span className="text-blue-400">→</span> Real-time Rendering
+                      <span className="text-blue-400">→</span> UE5 Filmmaking
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="text-blue-400">→</span> Environment Design
@@ -71,7 +71,7 @@ export default function AboutPage() {
                       <span className="text-blue-400">→</span> Lighting & Materials
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-blue-400">→</span> Virtual Production
+                      <span className="text-blue-400">→</span> MetaHuman Characters
                     </li>
                   </ul>
                 </div>

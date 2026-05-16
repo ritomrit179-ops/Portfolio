@@ -11,7 +11,7 @@ export default function Footer() {
               Portfolio
             </h3>
             <p className="text-gray-400 text-sm">
-              Creating cinematic experiences through videography and Unreal Engine rendering.
+              Unreal Engine filmmaking and videography — crafting cinematic worlds inside UE5 and capturing real ones on camera.
             </p>
           </div>
 

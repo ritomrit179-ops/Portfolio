@@ -16,20 +16,17 @@ export default function Home() {
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-6 py-32">
         <div className="max-w-4xl animate-fade-in">
-          <div className="mb-6 inline-block">
-            <span className="text-sm tracking-widest text-gray-400 uppercase">Visual Storyteller</span>
-          </div>
           <h1 className="text-6xl md:text-8xl font-bold mb-8 text-balance leading-tight">
             <span className="bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
-              Videography &
+              Unreal Engine
             </span>
             <br />
             <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
-              Unreal Rendering
+              & Videography
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-400 mb-8 max-w-2xl leading-relaxed">
-            Creating cinematic experiences through video production and real-time rendering.
+            Crafting cinematic worlds inside Unreal Engine 5 and capturing real ones on camera.
           </p>
         </div>
 
@@ -50,13 +47,13 @@ export default function Home() {
               Bringing Stories to Life
             </h2>
             <p className="text-lg text-gray-400 leading-relaxed mb-6">
-              I'm a videographer and Unreal Engine artist specializing in creating 
-              cinematic experiences that blend real-world footage with cutting-edge 
-              real-time rendering technology.
+              I'm a filmmaker working across two disciplines — Unreal Engine 5 filmmaking
+              and traditional videography. I use UE5 to build and shoot fully CG cinematic
+              productions, and take real cameras out to capture the world as it is.
             </p>
             <p className="text-lg text-gray-400 leading-relaxed mb-8">
-              With expertise in both traditional cinematography and modern game engine 
-              workflows, I transform ideas into immersive visual narratives.
+              Whether it's a CG western shot inside a game engine or real footage from
+              behind a lens, the goal is the same: tell a story worth watching.
             </p>
             <Link 
               href="/about"

@@ -10,8 +10,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Videography & Unreal Rendering",
-  description: "Professional videography and Unreal Engine rendering portfolio",
+  title: "Portfolio | Unreal Engine Filmmaking & Videography",
+  description: "Unreal Engine 5 filmmaking and videography portfolio",
 };
 
 export default function RootLayout({
