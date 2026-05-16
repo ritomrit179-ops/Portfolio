@@ -18,8 +18,8 @@ export default function ContactPage() {
 
   return (
     <main className="min-h-screen pt-20">
-      <div className="max-w-2xl mx-auto px-6 py-20">
-        <h1 className="text-5xl font-bold mb-4">Get In Touch</h1>
+      <div className="max-w-2xl mx-auto px-6 py-12 md:py-20">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">Get In Touch</h1>
         <p className="text-gray-400 text-lg mb-12">
           Interested in working together? Let's talk about your project.
         </p>

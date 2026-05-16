@@ -1,7 +1,5 @@
 import ProjectGrid from "@/components/ProjectGrid";
 import SplitVideoHero from "@/components/SplitVideoHero";
-import ProfileImage from "@/components/ProfileImage";
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -14,9 +12,9 @@ export default function Home() {
       </div>
 
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-6 py-32">
+      <section className="max-w-7xl mx-auto px-6 py-20 md:py-32">
         <div className="max-w-4xl animate-fade-in">
-          <h1 className="text-6xl md:text-8xl font-bold mb-8 text-balance leading-tight">
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold mb-6 md:mb-8 leading-tight">
             <span className="bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
               Unreal Engine
             </span>
@@ -25,7 +23,7 @@ export default function Home() {
               & Videography
             </span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-400 mb-8 max-w-2xl leading-relaxed">
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-400 mb-8 max-w-2xl leading-relaxed">
             Crafting cinematic worlds inside Unreal Engine 5 and capturing real ones on camera.
           </p>
         </div>
@@ -37,74 +35,62 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="max-w-7xl mx-auto px-6 py-20">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+      <section className="max-w-7xl mx-auto px-6 py-12 md:py-20">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
           <div>
-            <div className="mb-4">
-              <span className="text-sm tracking-widest text-gray-400 uppercase">About Me</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">
-              Bringing Stories to Life
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">
+              About Me
             </h2>
-            <p className="text-lg text-gray-400 leading-relaxed mb-6">
-              I'm a filmmaker working across two disciplines — Unreal Engine 5 filmmaking
-              and traditional videography. I use UE5 to build and shoot fully CG cinematic
-              productions, and take real cameras out to capture the world as it is.
+            <p className="text-lg text-gray-400 leading-relaxed">
+              I'm an Unreal Engine artist and cinematic creator focused on building immersive visual experiences. I create fully realized worlds inside Unreal Engine, designing environments, shaping lighting, directing camera movement, and crafting cinematic compositions with a strong storytelling approach. Alongside my digital work, I also shoot real-world videography, blending virtual production techniques with live-action filmmaking. This portfolio is a collection of the worlds, visuals, and stories I create.
             </p>
-            <p className="text-lg text-gray-400 leading-relaxed mb-8">
-              Whether it's a CG western shot inside a game engine or real footage from
-              behind a lens, the goal is the same: tell a story worth watching.
-            </p>
-            <Link 
-              href="/about"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 transition-colors group"
-            >
-              <span>Learn More About Me</span>
-              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
           </div>
 
-          <div className="relative">
-            {/* Stats/Highlights with small circular photo */}
-            <div className="grid grid-cols-2 gap-6">
-              <div className="p-6 bg-gradient-to-br from-blue-500/10 to-transparent border border-white/10 rounded-xl">
-                <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                  5+
+          <div className="relative mt-8 md:mt-0">
+            {/* Profile photo */}
+            <div className="flex justify-center mb-6 md:hidden">
+              <div className="relative">
+                <div className="absolute -inset-1 bg-gradient-to-r from-purple-500/30 via-blue-500/30 to-pink-500/30 rounded-full blur-lg" />
+                <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-white/20 bg-gradient-to-br from-gray-900 to-black">
+                  <img src="/MyPhoto.jpeg" alt="Profile" className="w-full h-full object-cover" />
                 </div>
-                <div className="text-gray-400">Years Experience</div>
-              </div>
-              <div className="p-6 bg-gradient-to-br from-pink-500/10 to-transparent border border-white/10 rounded-xl">
-                <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
-                  UE5
-                </div>
-                <div className="text-gray-400">Unreal Engine</div>
-              </div>
-              <div className="p-6 bg-gradient-to-br from-purple-500/10 to-transparent border border-white/10 rounded-xl">
-                <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  DVR
-                </div>
-                <div className="text-gray-400">DaVinci Resolve</div>
-              </div>
-              <div className="p-6 bg-gradient-to-br from-cyan-500/10 to-transparent border border-white/10 rounded-xl">
-                <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                  4K
-                </div>
-                <div className="text-gray-400">Video Quality</div>
               </div>
             </div>
 
-            {/* Small circular photo positioned on the side */}
-            <div className="absolute -right-8 top-1/2 -translate-y-1/2">
-              <div className="relative">
-                <div className="absolute -inset-1 bg-gradient-to-r from-purple-500/30 via-blue-500/30 to-pink-500/30 rounded-full blur-lg" />
-                <div className="relative w-32 h-32 rounded-full overflow-hidden border-2 border-white/20 bg-gradient-to-br from-gray-900 to-black">
-                  <img 
-                    src="/MyPhoto.jpeg" 
-                    alt="Profile" 
-                    className="w-full h-full object-cover"
-                  />
+            {/* Stats grid */}
+            <div className="grid grid-cols-2 gap-4 md:gap-6">
+              <div className="p-4 md:p-6 bg-gradient-to-br from-blue-500/10 to-transparent border border-white/10 rounded-xl">
+                <div className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                  5+
+                </div>
+                <div className="text-gray-400 text-sm md:text-base">Years Experience</div>
+              </div>
+              <div className="p-4 md:p-6 bg-gradient-to-br from-pink-500/10 to-transparent border border-white/10 rounded-xl">
+                <div className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
+                  UE5
+                </div>
+                <div className="text-gray-400 text-sm md:text-base">Unreal Engine</div>
+              </div>
+              <div className="p-4 md:p-6 bg-gradient-to-br from-purple-500/10 to-transparent border border-white/10 rounded-xl">
+                <div className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  DVR
+                </div>
+                <div className="text-gray-400 text-sm md:text-base">DaVinci Resolve</div>
+              </div>
+              <div className="p-4 md:p-6 bg-gradient-to-br from-cyan-500/10 to-transparent border border-white/10 rounded-xl relative">
+                <div className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                  4K
+                </div>
+                <div className="text-gray-400 text-sm md:text-base">Video Quality</div>
+
+                {/* Photo — desktop only, floats over the bottom-right corner */}
+                <div className="hidden md:block absolute -right-10 -bottom-10">
+                  <div className="relative">
+                    <div className="absolute -inset-1 bg-gradient-to-r from-purple-500/30 via-blue-500/30 to-pink-500/30 rounded-full blur-lg" />
+                    <div className="relative w-28 h-28 rounded-full overflow-hidden border-2 border-white/20 bg-gradient-to-br from-gray-900 to-black">
+                      <img src="/MyPhoto.jpeg" alt="Profile" className="w-full h-full object-cover" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -113,9 +99,9 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section className="max-w-7xl mx-auto px-6 py-32">
-        <div className="mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">
+      <section className="max-w-7xl mx-auto px-6 py-16 md:py-32">
+        <div className="mb-10 md:mb-16">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">
             Selected Work
           </h2>
           <div className="h-1 w-24 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" />

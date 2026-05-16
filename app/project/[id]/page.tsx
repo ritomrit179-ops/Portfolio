@@ -93,7 +93,7 @@ export default async function ProjectPage({
             )}
           </div>
 
-          <h1 className="text-6xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
             {project.title}
           </h1>
 
@@ -129,9 +129,7 @@ export default async function ProjectPage({
         {/* ── HIGHLIGHTS (if present) ────────────────────────────── */}
         {project.highlights && project.highlights.length > 0 && (
           <section className="mb-20">
-            <div
-              className={`grid grid-cols-2 md:grid-cols-3 gap-4`}
-            >
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {project.highlights.map((h, i) => (
                 <div
                   key={i}
@@ -148,7 +146,7 @@ export default async function ProjectPage({
         )}
 
         {/* ── MAIN CONTENT GRID ──────────────────────────────────── */}
-        <div className="grid md:grid-cols-3 gap-16 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16 mb-20">
           {/* Left — overview + production sections */}
           <div className="md:col-span-2 space-y-14">
             {/* Overview */}

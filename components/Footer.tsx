@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-white/10 bg-black/50 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-6 py-12">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
             <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
@@ -22,11 +22,6 @@ export default function Footer() {
               <li>
                 <Link href="/" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Work
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  About
                 </Link>
               </li>
               <li>
