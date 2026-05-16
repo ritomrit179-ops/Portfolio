@@ -49,7 +49,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 z-10 pointer-events-none" />
           <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none" />
 
-          {/* Video — muted loop preview on hover */}
+          {/* Video — muted loop preview on hover, seeks to 1s on load to show a frame */}
           {project.isLocal && (
             <video
               ref={videoRef}
@@ -58,6 +58,10 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               loop
               playsInline
               preload="metadata"
+              onLoadedMetadata={(e) => {
+                // Seek to 1 second so mobile shows a real frame instead of black
+                e.currentTarget.currentTime = 1;
+              }}
             >
               <source src={project.videoUrl} type="video/mp4" />
               <source src={project.videoUrl} type="video/quicktime" />
