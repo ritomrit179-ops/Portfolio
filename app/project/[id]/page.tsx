@@ -36,23 +36,28 @@ export default async function ProjectPage({
 
   const accentColor =
     project.category === "Unreal Engine Filmmaking"
-      ? "from-orange-500 to-red-500"
+      ? "from-cyan-400 to-blue-400"
       : "from-purple-500 to-blue-500";
 
   const accentBg =
     project.category === "Unreal Engine Filmmaking"
-      ? "from-orange-500/20 to-red-500/20"
+      ? "from-cyan-500/20 to-blue-700/20"
       : "from-purple-500/20 to-blue-500/20";
 
   const accentBorder =
     project.category === "Unreal Engine Filmmaking"
-      ? "border-orange-500/30"
+      ? "border-cyan-500/30"
       : "border-purple-500/30";
 
   const accentDot =
     project.category === "Unreal Engine Filmmaking"
-      ? "bg-orange-500"
+      ? "bg-cyan-500"
       : "bg-purple-500";
+
+  const categoryLabel =
+    project.category === "Unreal Engine Filmmaking"
+      ? "Unreal Engine Rendering"
+      : "Videography";
 
   return (
     <main className="min-h-screen pt-20 relative overflow-hidden">
@@ -80,7 +85,7 @@ export default async function ProjectPage({
             <span
               className={`px-3 py-1 bg-gradient-to-r ${accentBg} border ${accentBorder} rounded-full text-sm text-gray-300`}
             >
-              {project.category}
+              {categoryLabel}
             </span>
             {project.year && (
               <span className="text-sm text-gray-500">{project.year}</span>
@@ -264,7 +269,9 @@ function NextProject({ currentId }: { currentId: string }) {
         className="group flex items-center justify-between p-6 bg-white/3 border border-white/8 rounded-2xl hover:bg-white/6 hover:border-white/15 transition-all duration-300"
       >
         <div>
-          <p className="text-sm text-gray-500 mb-1">{next.category}</p>
+          <p className="text-sm text-gray-500 mb-1">
+            {next.category === "Unreal Engine Filmmaking" ? "Unreal Engine Rendering" : next.category}
+          </p>
           <h3 className="text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-blue-400 group-hover:bg-clip-text transition-all duration-300">
             {next.title}
           </h3>
