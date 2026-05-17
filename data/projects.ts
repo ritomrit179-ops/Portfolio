@@ -39,6 +39,7 @@ export const projects: Project[] = [
     description:
       "A cinematic music video trailer built in Unreal Engine 5 — two gunslingers, guitars, and a desert landscape set the stage for a confrontation with an unknown enemy.",
     videoUrl: "/videos/Cinematic_video.mp4",
+    thumbnail: "/videos/HellFire-thumb.jpg",  // drop the image in public/thumbnails/
     isLocal: true,
     year: "2024",
     subtitle: "Cinematic Music Video Trailer — Unreal Engine 5",
@@ -109,6 +110,7 @@ export const projects: Project[] = [
     title: "Virtual Environment",
     category: "Unreal Engine Filmmaking",
     description: "Architectural walkthrough produced in Unreal Engine 5",
+    thumbnail: "/videos/Animism-thumb.jpg",  // drop the image in public/thumbnails/ç
     videoUrl: "/videos/Virtual_environment.mp4",
     isLocal: true,
     year: "2025",
@@ -121,6 +123,7 @@ export const projects: Project[] = [
     title: "Product Visualisation",
     category: "Unreal Engine Filmmaking",
     description: "High-end product showcase with dynamic camera movements",
+    thumbnail: "/videos/Showcase-thumb.jpg",  // drop the image in public/thumbnails/
     videoUrl: "/videos/Product_visualisation.MP4",
     isLocal: true,
     year: "2025",
