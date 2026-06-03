@@ -19,12 +19,9 @@ export interface Project {
   tools: string[];
   year: string;
   isLocal?: boolean;
-  youtubeUrl?: string;
-  vimeoUrl?: string;
   subtitle?: string;
   role?: string;
   duration?: string;
-  location?: string;
   techSpecs?: TechSpec[];
   productionSections?: ProductionSection[];
   pipeline?: string[];
@@ -39,7 +36,7 @@ export const projects: Project[] = [
     description:
       "A cinematic music video trailer built in Unreal Engine 5 — two gunslingers, guitars, and a desert landscape set the stage for a confrontation with an unknown enemy.",
     videoUrl: "/videos/Cinematic_video.mp4",
-    thumbnail: "/videos/HellFire-thumb.jpg",  // drop the image in public/thumbnails/
+    thumbnail: "/videos/HellFire-thumb.jpg",
     isLocal: true,
     year: "2024",
     subtitle: "Cinematic Music Video Trailer — Unreal Engine 5",
@@ -110,8 +107,8 @@ export const projects: Project[] = [
     title: "Virtual Environment",
     category: "Unreal Engine Filmmaking",
     description: "Architectural walkthrough produced in Unreal Engine 5",
-    thumbnail: "/videos/Animism-thumb.jpg",  // drop the image in public/thumbnails/ç
     videoUrl: "/videos/Virtual_environment.mp4",
+    thumbnail: "/videos/Showcase-thumb.jpg",
     isLocal: true,
     year: "2025",
     details:
@@ -123,8 +120,8 @@ export const projects: Project[] = [
     title: "Product Visualisation",
     category: "Unreal Engine Filmmaking",
     description: "High-end product showcase with dynamic camera movements",
-    thumbnail: "/videos/Showcase-thumb.jpg",  // drop the image in public/thumbnails/
     videoUrl: "/videos/Product_visualisation.MP4",
+    thumbnail: "/videos/Animism-thumb.jpg",
     isLocal: true,
     year: "2025",
     details:
@@ -133,51 +130,54 @@ export const projects: Project[] = [
   },
   {
     id: "video-lisbon",
-    title: "Sunshine funk in Lisbon",
+    title: "Sunshine Funk in Lisbon",
     category: "Videography",
-    description: "This video features a funky, feel-good original guitar instrumental, filmed on location in Lisbon.",
-    thumbnail: "/videos/LisbonCapture.png",  // drop the image in public/thumbnails/
-    videoUrl: "/videos/Lisbon-Cinematic.mp4",
+    description: "A funky, feel-good original guitar instrumental filmed on location in Lisbon.",
+    videoUrl: "/videos/Lisbon-Cinematic.MP4",
+    thumbnail: "/videos/LisbonCapture.PNG",
     isLocal: true,
     year: "2026",
-    details: "This video features a funky, feel-good original guitar instrumental, filmed on location in Lisbon. It’s a vibrant, cinematic ride through the city’s sunlit streets — echoing the rhythm, color, and energy of the music itself.",
+    details:
+      "This video features a funky, feel-good original guitar instrumental, filmed on location in Lisbon. It's a vibrant, cinematic ride through the city's sunlit streets — echoing the rhythm, colour, and energy of the music itself.",
     tools: ["DaVinci Resolve"],
   },
   {
     id: "video-paris",
     title: "No Surprises in Paris",
     category: "Videography",
-    thumbnail: "/videos/ParisCapture.png",  // drop the image in public/thumbnails/
-    description: "This video features an instrumental guitar cover of “No Surprises” by Radiohead, filmed in Paris with the Eiffel Tower as its backdrop.",
+    description: "An instrumental guitar cover of No Surprises by Radiohead, filmed in Paris with the Eiffel Tower as backdrop.",
     videoUrl: "/videos/Video-Paris.mp4",
+    thumbnail: "/videos/ParisCapture.PNG",
     isLocal: true,
     year: "2026",
-    details: "This video features an instrumental guitar cover of “No Surprises” by Radiohead, filmed in Paris with the Eiffel Tower as its backdrop. Captured through a quiet, reflective lens, this short cinematic piece explores the stillness and solitude tucked into the city’s everyday corners.",
+    details:
+      "This video features an instrumental guitar cover of No Surprises by Radiohead, filmed in Paris with the Eiffel Tower as its backdrop. Captured through a quiet, reflective lens, this short cinematic piece explores the stillness and solitude tucked into the city's everyday corners.",
     tools: ["DaVinci Resolve"],
   },
   {
-    id: "video-Sicily",
+    id: "video-sicily",
     title: "The Godfather in Sicily",
     category: "Videography",
-    description: "This video features an instrumental guitar cover of themes from The Godfather, filmed in Sicily—the land where the story began.",
-    thumbnail: "/videos/SicilyCapture.png",  // drop the image in public/thumbnails/
+    description: "An instrumental guitar cover of themes from The Godfather, filmed in Sicily — the land where the story began.",
     videoUrl: "/videos/Video-Sicily.mp4",
+    thumbnail: "/videos/SicilyCapture.PNG",
     isLocal: true,
     year: "2026",
-    details: "This video features an instrumental guitar cover of themes from The Godfather, filmed in Sicily—the land where the story began. Set against a timeless Sicilian backdrop, this short cinematic travel piece captures the atmosphere of nostalgia, tradition, and quiet drama woven into the island’s streets.",
+    details:
+      "This video features an instrumental guitar cover of themes from The Godfather, filmed in Sicily — the land where the story began. Set against a timeless Sicilian backdrop, this short cinematic travel piece captures the atmosphere of nostalgia, tradition, and quiet drama woven into the island's streets.",
     tools: ["DaVinci Resolve"],
   },
-
   {
-    id: "video-Rome",
+    id: "video-rome",
     title: "Just a Man in Rome",
     category: "Videography",
-    description: "This video features an original guitar instrumental, filmed in Rome.",
-    thumbnail: "/videos/RomeCapture.png",  // drop the image in public/thumbnails/
+    description: "An original guitar instrumental filmed against the backdrop of Rome's most iconic landmarks.",
     videoUrl: "/videos/Video-Rome.mp4",
+    thumbnail: "/videos/RomeCapture.PNG",
     isLocal: true,
     year: "2026",
-    details: "This video features an original guitar instrumental, filmed in Rome. Set against the backdrop of the Colosseum, Roman Forum, Pantheon, Piazza Venezia, and other iconic sites, it’s a cinematic reflection on history, place, and time. Through music and imagery, it captures the echoes of an ancient world — a quiet conversation between past and present, told through sound and scene.",
+    details:
+      "This video features an original guitar instrumental, filmed in Rome. Set against the backdrop of the Colosseum, Roman Forum, Pantheon, Piazza Venezia, and other iconic sites, it's a cinematic reflection on history, place, and time — a quiet conversation between past and present, told through sound and scene.",
     tools: ["DaVinci Resolve"],
-  }
+  },
 ];
