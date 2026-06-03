@@ -41,8 +41,8 @@ export default function SplitVideoHero() {
             muted
             playsInline
           >
-            <source src={heroVideos[1]?.videoUrl} type="video/mp4" />
-            <source src={heroVideos[1]?.videoUrl} type="video/quicktime" />
+            <source src={heroVideos[2]?.videoUrl} type="video/mp4" />
+            <source src={heroVideos[2]?.videoUrl} type="video/quicktime" />
           </video>
           {/* Overlay gradient */}
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-transparent transition-opacity duration-500 hover:opacity-50" />
@@ -60,8 +60,8 @@ export default function SplitVideoHero() {
             muted
             playsInline
           >
-            <source src={heroVideos[2]?.videoUrl} type="video/mp4" />
-            <source src={heroVideos[2]?.videoUrl} type="video/quicktime" />
+            <source src={heroVideos[1]?.videoUrl} type="video/mp4" />
+            <source src={heroVideos[1]?.videoUrl} type="video/quicktime" />
           </video>
           {/* Overlay gradient */}
           <div className="absolute inset-0 bg-gradient-to-br from-pink-500/30 to-transparent transition-opacity duration-500 hover:opacity-50" />
