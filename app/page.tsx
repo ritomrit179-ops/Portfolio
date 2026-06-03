@@ -1,5 +1,6 @@
 import ProjectGrid from "@/components/ProjectGrid";
 import SplitVideoHero from "@/components/SplitVideoHero";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
@@ -99,14 +100,16 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section className="max-w-7xl mx-auto px-6 py-16 md:py-32">
+      <section id="work" className="max-w-7xl mx-auto px-6 py-16 md:py-32">
         <div className="mb-10 md:mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">
             Selected Work
           </h2>
           <div className="h-1 w-24 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" />
         </div>
-        <ProjectGrid />
+        <Suspense fallback={null}>
+          <ProjectGrid />
+        </Suspense>
       </section>
     </main>
   );

@@ -1,24 +1,49 @@
 "use client";
 
 import { projects } from "@/data/projects";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import type { Project } from "@/data/projects";
 
 type Filter = "Unreal Engine Filmmaking" | "Videography";
 
-const TABS: { label: string; value: Filter }[] = [
-  { label: "Unreal Engine", value: "Unreal Engine Filmmaking" },
-  { label: "Videography", value: "Videography" },
+const TABS: { label: string; value: Filter; param: string }[] = [
+  { label: "Unreal Engine", value: "Unreal Engine Filmmaking", param: "unreal" },
+  { label: "Videography", value: "Videography", param: "videography" },
 ];
 
-function extractYouTubeId(embedUrl: string): string {
-  const match = embedUrl.match(/embed\/([^?&]+)/);
-  return match ? match[1] : "";
-}
-
 export default function ProjectGrid() {
-  const [active, setActive] = useState<Filter>("Unreal Engine Filmmaking");
+  const searchParams = useSearchParams();
+  const router = useRouter();
+
+  const getInitialTab = (): Filter => {
+    const cat = searchParams.get("cat");
+    if (cat === "videography") return "Videography";
+    return "Unreal Engine Filmmaking";
+  };
+
+  const [active, setActive] = useState<Filter>(getInitialTab);
+
+  // On initial load, scroll to work section if cat param is present
+  useEffect(() => {
+    const cat = searchParams.get("cat");
+    if (cat) {
+      setTimeout(() => {
+        document.getElementById("work")?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  }, []);
+
+  const handleTabChange = (tab: (typeof TABS)[number]) => {
+    setActive(tab.value);
+    router.replace(`/?cat=${tab.param}#work`, { scroll: false });
+    // Scroll to the work section
+    setTimeout(() => {
+      document.getElementById("work")?.scrollIntoView({ behavior: "smooth" });
+    }, 50);
+  };
+
   const filtered = projects.filter((p) => p.category === active);
 
   return (
@@ -28,7 +53,7 @@ export default function ProjectGrid() {
         {TABS.map((tab) => (
           <button
             key={tab.value}
-            onClick={() => setActive(tab.value)}
+            onClick={() => handleTabChange(tab)}
             className={`px-5 py-2 rounded-full text-sm font-medium border transition-all duration-300 ${active === tab.value
                 ? "bg-white text-black border-white"
                 : "bg-transparent text-gray-400 border-white/15 hover:border-white/40 hover:text-white"
@@ -52,17 +77,16 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const isVideography = project.category === "Videography";
-  const hasEmbed = !!(project.youtubeUrl || project.vimeoUrl);
   const hasThumbnail = !!project.thumbnail;
 
   const handleMouseEnter = () => {
     setIsHovered(true);
-    if (!hasEmbed) videoRef.current?.play();
+    videoRef.current?.play();
   };
 
   const handleMouseLeave = () => {
     setIsHovered(false);
-    if (!hasEmbed && videoRef.current) {
+    if (videoRef.current) {
       videoRef.current.pause();
       videoRef.current.currentTime = 0;
     }
@@ -87,16 +111,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 z-10 pointer-events-none" />
           <div className={`absolute inset-0 bg-gradient-to-tr ${overlayClass} opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none`} />
 
-          {hasEmbed && project.youtubeUrl ? (
-            <img
-              src={`https://img.youtube.com/vi/${extractYouTubeId(project.youtubeUrl)}/maxresdefault.jpg`}
-              alt={project.title}
-              className="w-full h-full object-cover"
-              onError={(e) => {
-                (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${extractYouTubeId(project.youtubeUrl!)}/hqdefault.jpg`;
-              }}
-            />
-          ) : project.isLocal ? (
+          {project.isLocal ? (
             <>
               {/* Static thumbnail — shown at rest, hidden on hover */}
               {hasThumbnail && (
